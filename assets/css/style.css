@@ -1,7 +1,7 @@
 :root {
     --cards-color: rgb(226,231,227);
     --header-footer-border: gray;
-    --cards-title-border: rgb(1,108,138);
+    --cards-title-border: black;
 }
 
 
@@ -21,9 +21,9 @@ body {
 }
 
 /* Header Style Start */
-header {
+/* header {
     border-bottom: 2px solid var(--header-footer-border)
-}
+} */
 /* Header Style End */
 
 
@@ -44,7 +44,8 @@ header {
 
 .news-card {
     height: 375px;
-    background-color: var(--cards-color);
+    background-color: white;
+    opacity: 0.6;
 }
 
 .topStocks-card {
@@ -73,7 +74,8 @@ footer {
 }
 /* Footer Style End */
 
-.navbar {
+.navbar1 {
     background-color: rgb(237,233,233);
     width: 100%;
+    position: fixed;
 }
