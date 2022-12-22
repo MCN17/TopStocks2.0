@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>TOP STOCK</title>
+    
+    
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header Start -->
+        <header class="navbar d-flex mb-3">
+            <h1 class="is-size-1 has-text-black">Top Stocks</h1>
+            <p class="timeDisplay is-size-4 pt-4 has-text-black"></p>
+            <p class="statusDisplay is-size-4 pt-4 has-text-black"></p>
+        </header>
+        <!-- Header End -->
+
+        <!-- Index Buttons/ Search Bar Start -->
+        <div class="row justify-center d-flex flex column">
+            <div class="buttons-card col-lg-5 col-md-7 col-sm-9 text-white text-center justify-center rounded-xl">
+                <button type="button" class="btn1 btn btn-info btn-block mt-3">Vanguard 500 ETF</button>
+                <button type="button" class="btn2 btn btn-info btn-block">Dow Jones Industrial Average</button>
+                <button type="button" class="btn3 btn btn-info btn-block">Invesco QQQ Trust Series 1</button>
+                <div class="input-group mt-5">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-info" type="button" id="searchBtn">Go</button>
+                    </div>
+                    <input type="text" class="user-input form-control" id='searchText' placeholder="Search Ticker" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                  </div>
+            </div>
+        </div>
+        <!-- Index Buttons/ Search Bar End -->
+
+        <!-- Cards Row Start -->
+        <div class="row mt-40 mb-40 justify-content-around text-center">
+            <!-- Index Card Start -->
+            <div class="indexes-card col-lg-3 m-1 rounded-xl">
+                <h4 class="h3 pb-1 has-text-black">Indexes</h4>
+                <ul id="stock-info">
+                    <li class="stockTitle h5 has-text-black" id="stockTitle"></li>
+                    <li class="volume h6 has-text-black" id="volume"></li>
+                    <li class="open h6 has-text-black" id="open"></li>
+                    <li class="high h6 has-text-black" id="high"></li>
+                    <li class="low h6 has-text-black" id="low"></li>
+                    <li class="closer h6 has-text-black" id="closer"></li>
+                </ul>
+            </div>
+            <!-- Index Card End -->
+
+            <!-- News Card Start -->
+            <div class="news-card col-lg-4 m-1 rounded-xl">
+                <h4 class="h3 pb-1 has-text-black" id="news">News</h4>
+                <table class ="table" id="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row" id="z1"><a href="" target="_blank" id=link1></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z2"><a href="" target="_blank" id=link2></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z3"><a href="" target="_blank" id=link3></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z4"><a href="" target="_blank" id=link4></a></th>
+                        </tr>
+                        <!-- <tr>
+                            <th scope="row" id="z5"><a href="" target="_blank" id=link5></a></th>
+                        </tr> -->
+                        <!-- <tr>
+                            <th scope="row" id="z6"><a href="" target="_blank" id=link6></a></th>
+                        </tr> -->
+                    </tbody>    
+                </table>
+            </div>
+            <!-- News Card End -->
+
+            <!-- Top Stocks Card Start -->
+            <div class="topStocks-card col-lg-3 m-1 rounded-xl">
+                <h4 class="h3 pb-1 has-text-black">Top Stocks</h4>
+                <div class="table-responsive-lg">
+                    <table class ="table has-background-primary-light table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ticker</th>
+                                <th scope="col">Current</th>
+                                <th scope="col">Change</th>
+                                <th scope="col">Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" id="a1"></th>
+                                <td id="a2"></td>
+                                <td id="a3"></td>
+                                <td id="a4"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" id="b1"></th>
+                                <td id="b2"></td>
+                                <td id="b3"></td>
+                                <td id="b4"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" id="c1"></th>
+                                <td id="c2"></td>
+                                <td id="c3"></td>
+                                <td id="c4"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" id="d1"></th>
+                                <td id="d2"></td>
+                                <td id="d3"></td>
+                                <td id="d4"></td>
+                            </tr>
+                            <!-- <tr>
+                                <th scope="row" id="e1"></th>
+                                <td id="e2"></td>
+                                <td id="e3"></td>
+                                <td id="e4"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" id="f1"></th>
+                                <td id="f2"></td>
+                                <td id="f3"></td>
+                                <td id="f4"></td>
+                            </tr> -->
+                        </tbody>    
+                    </table>
+                </div>
+            </div>
+            <!-- Top Stocks Card End -->
+        </div>
+        <!-- Card Row End -->
+
+        <!-- Footer Start -->
+        <footer class="navbar d-flex">
+            <p class="is-size-6">Copyright &copy 2022 Top Stocks, Inc</p>
+            <!-- GitHub Link Buttons Start -->
+            <ul class="d-flex">
+                <li class="nav-item">
+                    <a class="btn-chris btn btn-info m-1" href="https://github.com/willycoxy" role="button">Will</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn-chris btn btn-info m-1" href="https://github.com/MCN17" role="button">Marty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn-chris btn btn-info m-1" href="https://github.com/Khristopher-Schick" role="button">Khris</a>
+                </li>
+            </ul>
+            <!-- Github Link Buttons End -->
+
+        </footer>
+        <!-- Footer End -->
+    </div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>
