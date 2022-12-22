@@ -21,9 +21,7 @@ body {
 }
 
 /* Header Style Start */
-/* header {
-    border-bottom: 2px solid var(--header-footer-border)
-} */
+
 /* Header Style End */
 
 
@@ -35,8 +33,9 @@ body {
 
 .indexes-card {
     height: 375px;
-    background-color: var(--cards-color);
+    background-color: lightgray;
 }
+
 
 .indexes-card li {
     line-height: 40px;
@@ -44,14 +43,19 @@ body {
 
 .news-card {
     height: 375px;
-    background-color: white;
-    opacity: 0.6;
+    background-color: lightgray;
+    opacity: 0.6
+}
+
+.news-card:hover {
+    opacity: 1;
 }
 
 .topStocks-card {
     height: 375px;
-    background-color: var(--cards-color);
+    background-color: lightgray;
 }
+
 /* Style Cards End */
 
 
@@ -65,17 +69,24 @@ body {
     background-color: white;
     color: black;
 } */
+
 /* Buttons Style End */
 
 
 /* Footer Style Start */
-footer {
-    border-top: 2px solid var(--header-footer-border)
-}
+
 /* Footer Style End */
 
+/* Navbar Style Start */
 .navbar1 {
     background-color: rgb(237,233,233);
     width: 100%;
     position: fixed;
+    opacity: 0.95;
 }
+
+.navbar1:hover {
+    opacity: 0.9;
+}
+
+/* Navbar Style End */
