@@ -138,7 +138,7 @@ const newsTicker = (ev)=>{
     ev.preventDefault();
     let ticker1 =  document.getElementById('searchText').value.toUpperCase(); 
     var newsApi = 'https://api.polygon.io/v2/reference/news?ticker=';
-    var newsApiKey = '&apiKey=97jcUfkUrkUqlBMzoexxjePUT1lnkBe4';
+    var newsApiKey = '&apiKey=brtbbSwEG9PunzaxnWZkCOLrdY0ckIyE';
     var final = newsApi + ticker1 + newsApiKey;
      fetch(final)
      .then(response => response.json())
@@ -221,7 +221,7 @@ document.getElementById("stockTitle").innerHTML = localStorage.getItem("Stock");
 // Function that fetches an api for the current time.
 // Current time is displayed in center of the navbar.
  function time () {
-    fetch("http://worldtimeapi.org/api/ip%22")
+    fetch("https://worldtimeapi.org/api/ip%22")
     .then(response => {
       return response.json();
     })
