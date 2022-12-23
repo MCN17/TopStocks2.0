@@ -107,19 +107,19 @@ fetch("https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/gainers?inclu
     console.log(data.tickers[0])
     document.getElementById('a1').textContent = data.tickers[0].ticker
     document.getElementById('a2').textContent = `$ ${data.tickers[0].day.c}`
-    document.getElementById('a3').textContent = `% ${data.tickers[0].todaysChangePerc}`
+    document.getElementById('a3').textContent = `% ${data.tickers[0].todaysChangePerc.toFixed(2)}`
     document.getElementById('a4').textContent = data.tickers[0].day.v
     document.getElementById('b1').textContent = data.tickers[1].ticker
     document.getElementById('b2').textContent = `$ ${data.tickers[1].day.c}`
-    document.getElementById('b3').textContent = `% ${data.tickers[1].todaysChangePerc}`
+    document.getElementById('b3').textContent = `% ${data.tickers[1].todaysChangePerc.toFixed(2)}`
     document.getElementById('b4').textContent = data.tickers[1].day.v
     document.getElementById('c1').textContent = data.tickers[2].ticker
     document.getElementById('c2').textContent = `$ ${data.tickers[2].day.c}`
-    document.getElementById('c3').textContent = `% ${data.tickers[2].todaysChangePerc}`
+    document.getElementById('c3').textContent = `% ${data.tickers[2].todaysChangePerc.toFixed(2)}`
     document.getElementById('c4').textContent = data.tickers[2].day.v
     document.getElementById('d1').textContent = data.tickers[3].ticker
     document.getElementById('d2').textContent = `$ ${data.tickers[3].day.c}`
-    document.getElementById('d3').textContent = `% ${data.tickers[3].todaysChangePerc}`
+    document.getElementById('d3').textContent = `% ${data.tickers[3].todaysChangePerc.toFixed(2)}`
     document.getElementById('d4').textContent = data.tickers[3].day.v
     // document.getElementById('e1').textContent = data.tickers[4].ticker
     // document.getElementById('e2').textContent = `$ ${data.tickers[4].day.c}`
@@ -183,7 +183,7 @@ const indexTicker = (ev)=>{
      fetch(final)
      .then(response => response.json())
      .then(data => {
-        document.getElementById('stockTitle').textContent = data.tickers[3]
+        document.getElementById('stockTitle').textContent = data.tickers[0].ticker
         const volume = data.tickers[0].day.v
         const open = data.tickers[0].day.o
         const high = data.tickers[0].day.h

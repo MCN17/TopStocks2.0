@@ -81,7 +81,7 @@ body {
 .navbar1 {
     background-color: rgb(237,233,233);
     width: 100%;
-    position: fixed;
+    position:fixed;
     opacity: 0.95;
 }
 
