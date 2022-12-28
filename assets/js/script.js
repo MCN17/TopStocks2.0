@@ -22,6 +22,8 @@ function marketStatus () {
 
 marketStatus();
 
+document.querySelector(".cards-row").style.visibility = "hidden"
+
 // Function that fetches api for info on Vanguard 500 etf that follows the S&P 500.
 // function getsP () {
 //     fetch("https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers?tickers=VOO&apiKey=brtbbSwEG9PunzaxnWZkCOLrdY0ckIyE")
@@ -207,6 +209,8 @@ const indexTicker = (ev)=>{
         document.querySelector(".high").innerHTML = `High: $${high}`;
         document.querySelector(".low").innerHTML = `Low: $${low}`;
         document.querySelector(".closer").innerHTML = `Close: $${close}`;
+        document.querySelector(".cards-row").style.visibility = "visible"
+        // document.querySelector(".jumbotron").style.visibility = "hidden"
         saveData();
      })
 }
