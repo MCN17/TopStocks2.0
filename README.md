@@ -19,7 +19,7 @@ When a user chooses either one of the top indexes or searches a specific stock o
 * Will
 * Marty
 
-## Live Appllicaation
+## Live Application
 https://mcn17.github.io/TopStocks2.0/
 
 ![image](https://user-images.githubusercontent.com/104735194/209837637-fd188ea5-6ee7-4aff-8c4e-23afec500579.png)
