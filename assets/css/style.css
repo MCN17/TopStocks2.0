@@ -110,3 +110,10 @@ footer {
 }
 
 /* Navbar Style End */
+
+/* Style Jumbotron Start */
+.jumbotron {
+    background-color: rgb(237,233,233);
+}
+
+/* Style Jumbotron End */
