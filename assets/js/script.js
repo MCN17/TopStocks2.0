@@ -121,6 +121,22 @@ fetch("https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/gainers?inclu
     document.getElementById('d2').textContent = `$ ${data.tickers[13].day.c}`
     document.getElementById('d3').textContent = `% ${data.tickers[13].todaysChangePerc.toFixed(2)}`
     document.getElementById('d4').textContent = data.tickers[13].day.v
+    document.getElementById('e1').textContent = data.tickers[14].ticker
+    document.getElementById('e2').textContent = `$ ${data.tickers[14].day.c}`
+    document.getElementById('e3').textContent = `% ${data.tickers[14].todaysChangePerc.toFixed(2)}`
+    document.getElementById('e4').textContent = data.tickers[14].day.v
+    document.getElementById('f1').textContent = data.tickers[15].ticker
+    document.getElementById('f2').textContent = `$ ${data.tickers[15].day.c}`
+    document.getElementById('f3').textContent = `% ${data.tickers[15].todaysChangePerc.toFixed(2)}`
+    document.getElementById('f4').textContent = data.tickers[15].day.v
+    document.getElementById('g1').textContent = data.tickers[16].ticker
+    document.getElementById('g2').textContent = `$ ${data.tickers[16].day.c}`
+    document.getElementById('g3').textContent = `% ${data.tickers[16].todaysChangePerc.toFixed(2)}`
+    document.getElementById('g4').textContent = data.tickers[16].day.v
+    document.getElementById('h1').textContent = data.tickers[17].ticker
+    document.getElementById('h2').textContent = `$ ${data.tickers[17].day.c}`
+    document.getElementById('h3').textContent = `% ${data.tickers[17].todaysChangePerc.toFixed(2)}`
+    document.getElementById('h4').textContent = data.tickers[17].day.v
   })
 
 // Function that fetches an api for news on a particular stock that is searched by the user.
