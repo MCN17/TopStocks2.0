@@ -1,12 +1,10 @@
 :root {
     --cards-color: rgb(226,231,227);
-    --header-footer-border: gray;
     --cards-title-border: black;
 }
 
 
 body {
-    background-color: rgb(34,34,36);
     background-image: url(../images/topStocksBridge2.jpg);
     background-size: cover;
 }
@@ -33,7 +31,7 @@ body {
 
 .indexes-card {
     height: 375px;
-    background-color: lightgray;
+    background-color: silver;
 }
 
 
@@ -43,7 +41,7 @@ body {
 
 .news-card {
     height: 375px;
-    background-color: lightgray;
+    background-color: silver;
     opacity: 0.6
 }
 
@@ -53,7 +51,7 @@ body {
 
 .topStocks-card {
     height: 375px;
-    background-color: lightgray;
+    background-color: silver;
 }
 
 /* Style Cards End */
@@ -78,6 +76,16 @@ body {
 /* Footer Style End */
 
 /* Navbar Style Start */
+footer {
+    background-color: none;
+    color: silver;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid silver;
+    padding: 0.5rem;
+
+}
+
 .navbar1 {
     background-color: rgb(237,233,233);
     width: 100%;

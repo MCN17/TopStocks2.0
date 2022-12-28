@@ -42,7 +42,7 @@
         <!-- Cards Row Start -->
         <div class="row mt-40 mb-40 justify-content-around text-center">
             <!-- Index Card Start -->
-            <div class="indexes-card col-lg-3 m-1 rounded-xl">
+            <!-- <div class="indexes-card col-lg-3 m-1 rounded-xl">
                 <h4 class="h3 pb-1 has-text-black">Stock Data</h4>
                 <ul id="stock-info">
                     <li class="stockTitle h5 has-text-black" id="stockTitle"></li>
@@ -52,11 +52,68 @@
                     <li class="low h6 has-text-black" id="low"></li>
                     <li class="closer h6 has-text-black" id="closer"></li>
                 </ul>
-            </div>
+            </div> -->
             <!-- Index Card End -->
 
+            <div class="card col-lg-3">
+                <div class="card-body">
+                  <h5 class="card-title" id="stockTitle"></h5>
+                  <p class="description card-text"></p>
+                </div>
+                <ul class="list-group">
+                  <li class=" volume list-group-item" id="volume"></li>
+                  <li class="open list-group-item" id="open"></li>
+                  <li class="high list-group-item" id="high"></li>
+                  <li class="low list-group-item" id="low"></li>
+                  <li class="closer list-group-item" id="closer"></li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
             <!-- News Card Start -->
-            <div class="news-card col-lg-3 m-1 rounded-xl">
+            <div class="card col-lg-3">
+                <div class="card-body">
+                  <h5 class="card-title" id="stockTitle"></h5>
+                  <p class="description card-text"></p>
+                </div>
+                <table class ="table" id="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row" id="z1"><a href="" target="_blank" id=link1></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z2"><a href="" target="_blank" id=link2></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z3"><a href="" target="_blank" id=link3></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z4"><a href="" target="_blank" id=link4></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z5"><a href="" target="_blank" id=link5></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z6"><a href="" target="_blank" id=link6></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z7"><a href="" target="_blank" id=link7></a></th>
+                        </tr>
+                        <tr>
+                            <th scope="row" id="z8"><a href="" target="_blank" id=link8></a></th>
+                        </tr>
+                    </tbody>    
+                </table>
+                <!-- <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div> -->
+              </div>  
+
+            <!-- <div class="news-card col-lg-3 m-1 rounded-xl">
                 <h4 class="h3 pb-1 has-text-black" id="news">News</h4>
                 <table class ="table" id="table">
                     <tbody>
@@ -72,15 +129,9 @@
                         <tr>
                             <th scope="row" id="z4"><a href="" target="_blank" id=link4></a></th>
                         </tr>
-                        <!-- <tr>
-                            <th scope="row" id="z5"><a href="" target="_blank" id=link5></a></th>
-                        </tr> -->
-                        <!-- <tr>
-                            <th scope="row" id="z6"><a href="" target="_blank" id=link6></a></th>
-                        </tr> -->
                     </tbody>    
                 </table>
-            </div>
+            </div> -->
             <!-- News Card End -->
 
             <!-- Top Stocks Card Start -->
@@ -121,18 +172,6 @@
                                 <td id="d3"></td>
                                 <td id="d4"></td>
                             </tr>
-                            <!-- <tr>
-                                <th scope="row" id="e1"></th>
-                                <td id="e2"></td>
-                                <td id="e3"></td>
-                                <td id="e4"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" id="f1"></th>
-                                <td id="f2"></td>
-                                <td id="f3"></td>
-                                <td id="f4"></td>
-                            </tr> -->
                         </tbody>    
                     </table>
                 </div>
@@ -142,7 +181,7 @@
         <!-- Card Row End -->
 
         <!-- Footer Start -->
-        <footer class="navbar d-flex">
+        <footer class="d-flex">
             <p class="is-size-5">Copyright &copy 2022 Top Stocks, Inc</p>
             <!-- GitHub Link Buttons Start -->
             <ul class="d-flex">

@@ -105,30 +105,22 @@ fetch("https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/gainers?inclu
   .then(response => response.json())
   .then(data => {
     console.log(data.tickers[0])
-    document.getElementById('a1').textContent = data.tickers[0].ticker
-    document.getElementById('a2').textContent = `$ ${data.tickers[0].day.c}`
-    document.getElementById('a3').textContent = `% ${data.tickers[0].todaysChangePerc.toFixed(2)}`
-    document.getElementById('a4').textContent = data.tickers[0].day.v
-    document.getElementById('b1').textContent = data.tickers[1].ticker
-    document.getElementById('b2').textContent = `$ ${data.tickers[1].day.c}`
-    document.getElementById('b3').textContent = `% ${data.tickers[1].todaysChangePerc.toFixed(2)}`
-    document.getElementById('b4').textContent = data.tickers[1].day.v
-    document.getElementById('c1').textContent = data.tickers[2].ticker
-    document.getElementById('c2').textContent = `$ ${data.tickers[2].day.c}`
-    document.getElementById('c3').textContent = `% ${data.tickers[2].todaysChangePerc.toFixed(2)}`
-    document.getElementById('c4').textContent = data.tickers[2].day.v
-    document.getElementById('d1').textContent = data.tickers[3].ticker
-    document.getElementById('d2').textContent = `$ ${data.tickers[3].day.c}`
-    document.getElementById('d3').textContent = `% ${data.tickers[3].todaysChangePerc.toFixed(2)}`
-    document.getElementById('d4').textContent = data.tickers[3].day.v
-    // document.getElementById('e1').textContent = data.tickers[4].ticker
-    // document.getElementById('e2').textContent = `$ ${data.tickers[4].day.c}`
-    // document.getElementById('e3').textContent = `% ${data.tickers[4].todaysChangePerc}`
-    // document.getElementById('e4').textContent = data.tickers[4].day.v
-    // document.getElementById('f1').textContent = data.tickers[5].ticker
-    // document.getElementById('f2').textContent = `$ ${data.tickers[5].day.c}`
-    // document.getElementById('f3').textContent = `% ${data.tickers[5].todaysChangePerc}`
-    // document.getElementById('f4').textContent = data.tickers[5].day.v
+    document.getElementById('a1').textContent = data.tickers[10].ticker
+    document.getElementById('a2').textContent = `$ ${data.tickers[10].day.c}`
+    document.getElementById('a3').textContent = `% ${data.tickers[10].todaysChangePerc.toFixed(2)}`
+    document.getElementById('a4').textContent = data.tickers[10].day.v
+    document.getElementById('b1').textContent = data.tickers[11].ticker
+    document.getElementById('b2').textContent = `$ ${data.tickers[11].day.c}`
+    document.getElementById('b3').textContent = `% ${data.tickers[11].todaysChangePerc.toFixed(2)}`
+    document.getElementById('b4').textContent = data.tickers[11].day.v
+    document.getElementById('c1').textContent = data.tickers[12].ticker
+    document.getElementById('c2').textContent = `$ ${data.tickers[12].day.c}`
+    document.getElementById('c3').textContent = `% ${data.tickers[12].todaysChangePerc.toFixed(2)}`
+    document.getElementById('c4').textContent = data.tickers[12].day.v
+    document.getElementById('d1').textContent = data.tickers[13].ticker
+    document.getElementById('d2').textContent = `$ ${data.tickers[13].day.c}`
+    document.getElementById('d3').textContent = `% ${data.tickers[13].todaysChangePerc.toFixed(2)}`
+    document.getElementById('d4').textContent = data.tickers[13].day.v
   })
 
 // Function that fetches an api for news on a particular stock that is searched by the user.
@@ -149,21 +141,26 @@ const newsTicker = (ev)=>{
         // document.getElementById('z3').textContent = data.results[2].title
         // document.getElementById('z4').textContent = data.results[3].title
         // document.getElementById('z5').textContent = data.results[4].title
-        // saveNews();          
+        // saveNews(); 
+                 
         //Need to fix this function--> once saved to local storage the news for a specific stock won't change if user searches a new stock.
 
         document.getElementById('link1').innerHTML = data.results[0].title
         document.getElementById('link2').innerHTML = data.results[1].title
         document.getElementById('link3').innerHTML = data.results[2].title
         document.getElementById('link4').innerHTML = data.results[3].title
-        // document.getElementById('link5').innerHTML = data.results[4].title
-        // document.getElementById('link6').innerHTML = data.results[5].title
+        document.getElementById('link5').innerHTML = data.results[4].title
+        document.getElementById('link6').innerHTML = data.results[5].title
+        document.getElementById('link7').innerHTML = data.results[6].title
+        document.getElementById('link8').innerHTML = data.results[7].title
         document.getElementById('link1').href = data.results[0].article_url 
         document.getElementById('link2').href = data.results[1].article_url 
         document.getElementById('link3').href = data.results[2].article_url 
         document.getElementById('link4').href = data.results[3].article_url 
-        // document.getElementById('link5').href = data.results[4].article_url 
-        //document.getElementById('link6').href = data.results[5].article_url 
+        document.getElementById('link5').href = data.results[4].article_url 
+        document.getElementById('link6').href = data.results[5].article_url 
+        document.getElementById('link7').href = data.results[6].article_url 
+        document.getElementById('link8').href = data.results[7].article_url 
 
      })
 }
@@ -199,6 +196,26 @@ const indexTicker = (ev)=>{
 }
 document.addEventListener('DOMContentLoaded', ()=> {
     document.getElementById('searchBtn').addEventListener('click', indexTicker);
+});
+
+const tickerDetails = (ev)=>{
+  ev.preventDefault();
+  let indexTicker2 =  document.getElementById('searchText').value.toUpperCase(); 
+  var indexApi = `https://api.polygon.io/v3/reference/tickers/${indexTicker2}?=`;
+  var indexApiKey = '&apiKey=brtbbSwEG9PunzaxnWZkCOLrdY0ckIyE';
+  var final = indexApi + indexApiKey;
+   fetch(final)
+   .then(response => response.json())
+   .then(data => {
+      const description = data.results.description
+      console.log(data.results);
+      const logo = data.results.branding.logo_url
+      document.querySelector(".description").innerHTML = `${description}`
+      document.querySelector(".logo").innerHTML = `${logo}`;
+   })
+}
+document.addEventListener('DOMContentLoaded', ()=> {
+  document.getElementById('searchBtn').addEventListener('click', tickerDetails);
 });
 
 
